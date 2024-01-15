@@ -7,7 +7,7 @@ import SongButton from '../components/SongButton'; // Adjust the path as per you
 
 const songs = [
   { id: 1, title: 'Song 1', audioFile: 'https://github.com/Manoj-kumar-C/Storage-of-Meme-App/releases/download/0.1/1.mp3' }, // Replace with actual audio files
-  { id: 2, title: 'Song 2', audioFile: 'https://github.com/Manoj-kumar-C/Storage-of-Meme-App/releases/download/0.1/10.mp3' },
+  { id: 2, title: 'NO god plz no', audioFile: 'https://github.com/Manoj-kumar-C/Storage-of-Meme-App/releases/download/0.1/10.mp3' },
   { id: 3, title: 'Song 3', audioFile: 'song3.mp3' },
   { id: 4, title: 'Song 4', audioFile: 'song4.mp3' },
 ];

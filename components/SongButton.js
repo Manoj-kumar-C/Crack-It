@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'blue', // Change the color as per your preference
     margin: 5,
     borderRadius: 8,
-    height: 80,
+    height: 60,
     marginTop: 20,
   },
   buttonText: {
