@@ -17,6 +17,7 @@ const SoundsNavigation = () => {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="SoundNaviScreen">
         <Stack.Screen name="SongScreen" component={SoundNaviScreen} />
+        <Stack.Screen name="MemeScreen" component={TestScreen} />
         <Stack.Screen name="Page1" component={Page1} />
         <Stack.Screen name="Page2" component={Page2} />
       </Stack.Navigator>
