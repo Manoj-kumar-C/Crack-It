@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const MemeMainScreen = () => {
+const Page1 = () => {
   return (
     <View>
-      <Text>MemeMainScreen</Text>
+      <Text>Page1</Text>
     </View>
   )
 }
 
-export default MemeMainScreen
+export default Page1
