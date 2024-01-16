@@ -10,6 +10,7 @@ import SongButton from '../components/SongButton';
 import TestScreen from '../screens/TestScreen';
 import SoundNaviScreen from '../screens/SoundNaviScreen';
 import ComingSoonScreen from '../screens/comingsoon/ComingSoon';
+import Page3 from '../screens/soundeffects/Page3';
 
 const Stack = createStackNavigator();
 
@@ -28,6 +29,7 @@ const SoundsNavigation = () => {
         <Stack.Screen options={options} name="MemeScreen" component={TestScreen} />
         <Stack.Screen options={options} name="Page1" component={Page1} />
         <Stack.Screen options={options} name="Page2" component={Page2} />
+        <Stack.Screen options={options} name="Page3" component={Page3} />
         <Stack.Screen options={options} name="ComingSoon" component={ComingSoonScreen} />
       </Stack.Navigator>
     </NavigationContainer>

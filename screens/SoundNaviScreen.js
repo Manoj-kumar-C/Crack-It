@@ -4,10 +4,11 @@ import { View, TouchableOpacity, Text, Image, StyleSheet, FlatList } from 'react
 
 const SoundNaviScreen = ({ navigation }) => {
   const jsonData = [
-    { id: 1, imageUrl: 'https://cdn-icons-png.flaticon.com/128/14096/14096130.png', buttonText: 'Animal Sounds', screenName: 'Page1' },
-    { id: 2, imageUrl: 'https://cdn-icons-png.flaticon.com/128/14096/14096130.png', buttonText: 'Popular 100', screenName: 'Page2' },
-    { id: 3, imageUrl: 'https://cdn-icons-png.flaticon.com/128/14096/14096130.png', buttonText: 'Movie Meme', screenName: 'Page2' },
+    { id: 1, imageUrl: 'https://cdn-icons-png.flaticon.com/128/616/616412.png', buttonText: 'Animal Sounds', screenName: 'Page1' },
+    { id: 2, imageUrl: 'https://cdn-icons-png.flaticon.com/128/426/426833.png', buttonText: 'Popular 100', screenName: 'Page2' },
+    { id: 3, imageUrl: 'https://cdn-icons-png.flaticon.com/128/4221/4221484.png', buttonText: 'Movie Meme', screenName: 'Page3' },
     { id: 4, imageUrl: 'https://cdn-icons-png.flaticon.com/128/14096/14096130.png', buttonText: 'Other Memes', screenName: 'ComingSoon' },
+    
     // Add more items as needed
   ];
 
