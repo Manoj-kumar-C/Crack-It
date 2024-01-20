@@ -1,11 +1,11 @@
 // SongButton.js
 
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 
-const SongButton = ({ title, onPress }) => {
+const SongButton = ({ title, onPress, width }) => {
   return (
-    <TouchableOpacity style={styles.button} onPress={onPress}>
+    <TouchableOpacity style={[styles.button, { width }]} onPress={onPress}>
       <Text style={styles.buttonText}>{title}</Text>
     </TouchableOpacity>
   );
@@ -13,10 +13,9 @@ const SongButton = ({ title, onPress }) => {
 
 const styles = StyleSheet.create({
   button: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'blue', // Change the color as per your preference
+    backgroundColor: 'blue',
     margin: 5,
     borderRadius: 8,
     height: 60,
