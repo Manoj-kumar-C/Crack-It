@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
-import { Button, Input, Image } from 'react-native-elements';
+import { Button, Input, Image, Icon } from 'react-native-elements';
 
 const LoginScreen = ({ navigation }) => {
   const [username, setUsername] = useState('');
@@ -13,13 +13,22 @@ const LoginScreen = ({ navigation }) => {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Image source={require('./assets/login_image.png')} style={styles.logo} />
+      <View style={styles.header}>
+        <Image source={require('../../assets/auth/login.png')} style={styles.logo} />
+        <Icon
+          name='user'
+          type='font-awesome'
+          color='#517fa4'
+          size={30}
+        />
+      </View>
       <Text style={styles.title}>Login</Text>
       <Input
         placeholder="Username"
         value={username}
         onChangeText={(text) => setUsername(text)}
         inputStyle={styles.input}
+        containerStyle={styles.inputContainer}
       />
       <Input
         placeholder="Password"
@@ -27,13 +36,17 @@ const LoginScreen = ({ navigation }) => {
         onChangeText={(text) => setPassword(text)}
         secureTextEntry
         inputStyle={styles.input}
+        containerStyle={styles.inputContainer}
       />
-      <Button
-        title="Login"
-        buttonStyle={styles.button}
-        onPress={handleLogin}
-      />
-      <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
+      <View style={styles.buttonContainer}>
+        <Button
+          title="Login"
+          buttonStyle={styles.button}
+          titleStyle={styles.buttonText}
+          onPress={handleLogin}
+        />
+      </View>
+      <TouchableOpacity onPress={() => navigation.navigate('SignUpScreen')}>
         <Text style={styles.link}>Don't have an account? Sign Up here</Text>
       </TouchableOpacity>
     </ScrollView>
@@ -48,28 +61,53 @@ const styles = StyleSheet.create({
     padding: 16,
     backgroundColor: '#fff',
   },
+  header: {
+    alignItems: 'center',
+    marginBottom: 20,
+  },
   logo: {
     width: 150,
     height: 150,
-    marginBottom: 20,
+    marginBottom: 10,
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
   },
-  input: {
-    height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
+  inputContainer: {
     marginBottom: 15,
-    paddingLeft: 10,
+    width: '100%',
+  },
+  input: {
+    height: 50,
+    borderColor: '#3498db',
+    borderWidth: 2,
+    paddingLeft: 50,
+    borderRadius: 25,
+    fontSize: 18,
+    color: '#333',
   },
   button: {
-    backgroundColor: 'blue',
-    borderRadius: 5,
-    marginTop: 10,
+    backgroundColor: '#3498db',
+    borderRadius: 10,
+    width: '80%',
+    paddingVertical: 15,
+    shadowColor: '#3498db',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.4,
+    shadowRadius: 4,
+    elevation: 5,
   },
+  buttonText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#fff',
+    textAlign: 'center', // Ensure the text is centered
+  },
+  
+  
+  
   link: {
     marginTop: 20,
     color: 'blue',

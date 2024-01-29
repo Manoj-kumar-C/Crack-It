@@ -14,19 +14,21 @@ const SignUpScreen = ({ navigation }) => {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Image source={require('./assets/signup_image.png')} style={styles.logo} />
+      <Image source={require('../../assets/auth/signup.png')} style={styles.logo} />
       <Text style={styles.title}>Sign Up</Text>
       <Input
         placeholder="Username"
         value={username}
         onChangeText={(text) => setUsername(text)}
         inputStyle={styles.input}
+        containerStyle={styles.inputContainer}
       />
       <Input
         placeholder="Email"
         value={email}
         onChangeText={(text) => setEmail(text)}
         inputStyle={styles.input}
+        containerStyle={styles.inputContainer}
         keyboardType="email-address"
       />
       <Input
@@ -35,13 +37,17 @@ const SignUpScreen = ({ navigation }) => {
         onChangeText={(text) => setPassword(text)}
         secureTextEntry
         inputStyle={styles.input}
+        containerStyle={styles.inputContainer}
       />
-      <Button
-        title="Sign Up"
-        buttonStyle={styles.button}
-        onPress={handleSignUp}
-      />
-      <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+      <View style={styles.buttonContainer}>
+        <Button
+          title="Sign Up"
+          buttonStyle={styles.button}
+          titleStyle={styles.buttonText}
+          onPress={handleSignUp}
+        />
+      </View>
+      <TouchableOpacity onPress={() => navigation.navigate('LoginScreen')}>
         <Text style={styles.link}>Already have an account? Login here</Text>
       </TouchableOpacity>
     </ScrollView>
@@ -65,18 +71,37 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
+    color: '#333',
+  },
+  inputContainer: {
+    marginBottom: 15,
+    width: '80%',
   },
   input: {
-    height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
-    marginBottom: 15,
-    paddingLeft: 10,
+    height: 50,
+    borderColor: '#3498db',
+    borderWidth: 2,
+    paddingLeft: 20,
+    borderRadius: 25,
+    fontSize: 18,
+    color: '#333',
+  },
+  buttonContainer: {
+    width: '100%', // Use 100% width to center the button
+    alignItems: 'center',
+    marginTop: 20,
   },
   button: {
-    backgroundColor: 'blue',
-    borderRadius: 5,
-    marginTop: 10,
+    backgroundColor: '#3498db',
+    borderRadius: 10,
+    width: '80%',
+    paddingVertical: 15,
+  },
+  buttonText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#fff',
+    textAlign: 'center',
   },
   link: {
     marginTop: 20,
