@@ -37,7 +37,7 @@ const SoundsNavigation = () => {
         <Stack.Screen options={options} name="Page3" component={Page3} />
         <Stack.Screen options={options} name="ComingSoon" component={ComingSoonScreen} />
 
-         {/* auth acreens  */}
+         {/* auth screens  */}
         <Stack.Screen options={options} name="LoginScreen" component={LoginScreen} />
         <Stack.Screen options={options} name="SignUpScreen" component={SignUpScreen} />
       </Stack.Navigator>
