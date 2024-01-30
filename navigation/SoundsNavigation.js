@@ -14,6 +14,7 @@ import LoginScreen from '../screens/auth/LoginScreen';
 
 import Page3 from '../screens/soundeffects/Page3';
 import SignUpScreen from '../screens/auth/SignUpScreen';
+import VideoList from '../screens/youtube/videoList';
 
 const Stack = createStackNavigator();
 
@@ -27,8 +28,9 @@ const options = {
 const SoundsNavigation = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="SoundNaviScreen">
+      <Stack.Navigator initialRouteName="VideoScreen">
 
+      <Stack.Screen options={options} name="VideoScreen" component={VideoList} />
         
         <Stack.Screen options={options} name="SongScreen" component={SoundNaviScreen} />
         <Stack.Screen options={options} name="MemeScreen" component={TestScreen} />
