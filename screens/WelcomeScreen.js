@@ -9,13 +9,13 @@ const WelcomeScreen = () => {
       id: 1,
       title: 'Welcome to Crack It App',
       description: 'Discover amazing features and enjoy your experience.',
-      image: require('../assets/memes/MainScreen/meme.png'), // Replace with your image path
+      image: require('../assets/memes/MainScreen/meme.png'), 
     },
     {
       id: 2,
       title: 'Ready to memes and Educational Content ',
       description: 'Find Popular Memes and much more about Educational.',
-      image: require('../assets/memes/MainScreen/scholarship.png'), // Replace with your image path
+      image: require('../assets/memes/MainScreen/scholarship.png'), 
     },
     // Add more slides as needed
   ];
@@ -41,8 +41,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   image: {
-    width: 200, // Adjust image size as needed
-    height: 200, // Adjust image size as needed
+    width: 200, 
+    height: 200,
   },
   title: {
     fontSize: 24,

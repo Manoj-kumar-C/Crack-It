@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import WelcomeScreen from './screens/WelcomeScreen'; // Import your WelcomeScreen component
 import SoundsNavigation from './navigation/SoundsNavigation';
+import BottomTabNavigator from './navigation/BottomTabNavigation';
+import RootNavigation from './navigation/RootNavigation';
 
 export default function App() {
   const [showWelcome, setShowWelcome] = useState(true);

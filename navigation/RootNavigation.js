@@ -1,11 +1,14 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import BottomTabNavigator from './BottomTabNavigation'
+import SoundsNavigation from './SoundsNavigation'
 
 const RootNavigation = () => {
   return (
-    <View>
-      <Text>RootNavigation</Text>
-    </View>
+    <>
+    <BottomTabNavigator />
+    <SoundsNavigation />
+    </>
   )
 }
 
