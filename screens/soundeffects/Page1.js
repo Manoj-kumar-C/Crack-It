@@ -49,7 +49,7 @@ const Page1 = () => {
         <Image source={require('../../assets/auth/signup.png')} style={styles.shareIcon} />
       </View>
       <View style={styles.buttonContent}>
-        <Image source={require('../../assets/auth/signup.png')} style={styles.customIcon} />
+        <Image source={require('../../assets/memes/others/fart.png')} style={styles.customIcon} />
         <Text style={styles.buttonText}>{item.title}</Text>
       </View>
     </TouchableOpacity>
@@ -88,6 +88,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 10,
     right: 10,
+    
   },
   buttonContent: {
     flex: 1,

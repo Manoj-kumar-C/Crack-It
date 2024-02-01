@@ -3,10 +3,11 @@ import { View, TouchableOpacity, Text, Image, StyleSheet, FlatList } from 'react
 
 const SoundNaviScreen = ({ navigation }) => {
   const jsonData = [
-    { id: 1, imageUrl: 'https://cdn-icons-png.flaticon.com/128/616/616412.png', buttonText: 'Animal Sounds', screenName: 'Page1' },
-    { id: 2, imageUrl: 'https://cdn-icons-png.flaticon.com/128/426/426833.png', buttonText: 'Popular 100', screenName: 'Page2' },
-    { id: 3, imageUrl: 'https://cdn-icons-png.flaticon.com/128/4221/4221484.png', buttonText: 'Movie Meme', screenName: 'Page3' },
-    { id: 4, imageUrl: 'https://cdn-icons-png.flaticon.com/128/14096/14096130.png', buttonText: 'Other Memes', screenName: 'ComingSoon' },
+    { id: 1, imagePath: require('../assets/memes/MainScreen/fart.png'), buttonText: 'Fart Sounds', screenName: 'Page1' },
+    { id: 2, imagePath: require('../assets/memes/MainScreen/bear.png'), buttonText: 'Animal Sounds', screenName: 'Page2' },
+    { id: 3, imagePath: require('../assets/memes/MainScreen/fart.png'), buttonText: 'Movie Meme', screenName: 'Page3' },
+    { id: 4, imagePath: require('../assets/memes/MainScreen/fart.png'), buttonText: 'Popular 100', screenName: 'Page3' },
+    { id: 5, imagePath: require('../assets/memes/MainScreen/meme.png'), buttonText: 'Other Memes', screenName: 'ComingSoon' },
     // Add more items as needed
   ];
 
@@ -19,7 +20,7 @@ const SoundNaviScreen = ({ navigation }) => {
       style={styles.button}
       onPress={() => handleButtonPress(item.screenName)}
     >
-      <Image source={{ uri: item.imageUrl }} style={styles.buttonImage} />
+      <Image source={item.imagePath} style={styles.buttonImage} />
       <Text style={styles.buttonText}>{item.buttonText}</Text>
     </TouchableOpacity>
   );
@@ -46,7 +47,6 @@ const styles = StyleSheet.create({
   },
   flatListContainer: {
     padding: 0,
-     // Additional padding to the right
     backgroundColor: '#EAEAEA', // Light Grey
   },
   button: {
@@ -58,7 +58,8 @@ const styles = StyleSheet.create({
     width: 150, // Adjust the width as needed
   },
   buttonText: {
-    color: 'white',
+    color: 'black',
+    fontWeight:'bold',
     fontSize: 16,
     marginTop: 5,
   },

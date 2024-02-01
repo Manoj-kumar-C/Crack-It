@@ -7,15 +7,15 @@ const WelcomeScreen = () => {
   const slides = [
     {
       id: 1,
-      title: 'Welcome to Your App',
+      title: 'Welcome to Crack It App',
       description: 'Discover amazing features and enjoy your experience.',
-      image: require('../assets/auth/login.png'), // Replace with your image path
+      image: require('../assets/memes/MainScreen/meme.png'), // Replace with your image path
     },
     {
       id: 2,
-      title: 'Explore the App',
-      description: 'Find everything you need at your fingertips.',
-      image: require('../assets/auth/login.png'), // Replace with your image path
+      title: 'Ready to memes and Educational Content ',
+      description: 'Find Popular Memes and much more about Educational.',
+      image: require('../assets/memes/MainScreen/scholarship.png'), // Replace with your image path
     },
     // Add more slides as needed
   ];
