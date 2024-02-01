@@ -25,7 +25,7 @@ export default function App() {
   return (
     <>
       <StatusBar hidden={true} />
-      {showWelcome ? <WelcomeScreen /> : <SoundsNavigation />}
+      {showWelcome ? <WelcomeScreen /> : <RootNavigation />}
     </>
   );
 }

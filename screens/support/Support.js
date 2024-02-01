@@ -1,27 +1,42 @@
 // SupportScreen.js
 import React from 'react';
-import { View, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Image, StyleSheet, TouchableOpacity, Linking } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
+import login from '../../assets/auth/login.png';
+
+const socialMediaData = [
+  { name: "Facebook", url: "https://www.facebook.com" },
+  { name: "Twitter", url: "https://twitter.com" },
+  { name: "Instagram", url: "https://www.instagram.com" },
+  { name: "LinkedIn", url: "https://www.linkedin.com" }
+];
+
 const SupportScreen = () => {
+  // Function to open a URL when a social media icon is pressed
+  const openUrl = (url) => {
+    Linking.openURL(url).catch((err) => console.error('Error opening URL:', err));
+  };
+
   return (
     <View style={styles.container}>
+      {/* Image at the top */}
       <Image
-        source={{ uri: 'https://example.com/support-image.jpg' }}
+        source={login}
         style={styles.image}
       />
 
+      {/* Social media icons */}
       <View style={styles.socialContainer}>
-        <TouchableOpacity style={styles.iconContainer}>
-          <Icon name="facebook" size={30} color="#3b5998" />
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.iconContainer}>
-          <Icon name="twitter" size={30} color="#1da1f2" />
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.iconContainer}>
-          <Icon name="instagram" size={30} color="#e4405f" />
-        </TouchableOpacity>
-        {/* Add more social icons as needed */}
+        {socialMediaData.map((socialMedia, index) => (
+          <TouchableOpacity
+            key={index}
+            style={styles.iconContainer}
+            onPress={() => openUrl(socialMedia.url)}
+          >
+            <Icon name={socialMedia.name.toLowerCase()} size={30} color="#000" />
+          </TouchableOpacity>
+        ))}
       </View>
     </View>
   );
