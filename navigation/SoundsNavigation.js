@@ -28,11 +28,12 @@ const options = {
 const SoundsNavigation = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="VideoScreen">
+      <Stack.Navigator initialRouteName="SongScreen">
 
-      <Stack.Screen options={options} name="VideoScreen" component={VideoList} />
+      
         
         <Stack.Screen options={options} name="SongScreen" component={SoundNaviScreen} />
+        <Stack.Screen options={options} name="VideoScreen" component={VideoList} />
         <Stack.Screen options={options} name="MemeScreen" component={TestScreen} />
         <Stack.Screen options={options} name="Page1" component={Page1} />
         <Stack.Screen options={options} name="Page2" component={Page2} />

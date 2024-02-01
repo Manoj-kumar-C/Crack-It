@@ -1,7 +1,7 @@
 // MainScreen.js
 
 import React, { useEffect, useState } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Dimensions } from 'react-native';
 import { Audio } from 'expo-av';
 import SongButton from '../../components/SongButton'; // Adjust the path as per your file structure
 
@@ -29,6 +29,9 @@ const Page3 = () => {
     );
   };
 
+  const screenWidth = Dimensions.get('window').width;
+  const buttonWidth = (screenWidth - 40) / 4; // Subtracting padding
+
   return (
     <View style={styles.container}>
       {songs.map((song) => (
@@ -36,6 +39,7 @@ const Page3 = () => {
           key={song.id}
           title={song.title}
           onPress={() => playSong(song.audioFile)}
+          width={buttonWidth}
         />
       ))}
     </View>
@@ -45,9 +49,11 @@ const Page3 = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'black',
+    backgroundColor: 'white',
     padding: 10,
     flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
   },
 });
 
