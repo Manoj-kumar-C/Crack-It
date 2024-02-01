@@ -6,10 +6,10 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import login from '../../assets/auth/login.png';
 
 const socialMediaData = [
-  { name: "Facebook", url: "https://www.facebook.com" },
-  { name: "Twitter", url: "https://twitter.com" },
-  { name: "Instagram", url: "https://www.instagram.com" },
-  { name: "LinkedIn", url: "https://www.linkedin.com" }
+  // { name: "Facebook", url: "https://www.facebook.com" },
+  { name: "Twitter", url: "https://twitter.com/manoj_kumar__c" },
+  { name: "Instagram", url: "https://www.instagram.com/manojkumar._.c/" },
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/manojkumar--c/" }
 ];
 
 const SupportScreen = () => {

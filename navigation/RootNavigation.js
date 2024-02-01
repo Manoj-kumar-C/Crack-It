@@ -46,7 +46,7 @@ const RootNavigation = () => {
         }}
       />
       <Tab.Screen
-        name="Support"
+        name="Support Me"
         component={SupportScreen}
         options={{
           tabBarIcon: ({ color, size }) => (
