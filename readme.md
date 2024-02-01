@@ -25,9 +25,18 @@ Meme Pages with API integration
 6. 
 A page that showcases your coding skills (e.g., Github, Codepen)
 
+Future Implementation:
+
+Course Integration
+In-App Purchases
+Payment Gateway Integration
+
 Embedding Youtube Videos 
 
 
 Firebase Authentication Integration 
+
+
+
 
 ```
