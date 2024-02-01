@@ -1,16 +1,29 @@
+import React, { useState, useEffect } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, ViewComponent } from 'react-native';
-import TestScreen from './screens/TestScreen';
+import WelcomeScreen from './screens/WelcomeScreen'; // Import your WelcomeScreen component
 import SoundsNavigation from './navigation/SoundsNavigation';
 
 export default function App() {
+  const [showWelcome, setShowWelcome] = useState(true);
+
+  useEffect(() => {
+    // Simulate an asynchronous task (e.g., fetching user data, checking authentication)
+    // Set showWelcome to false when the task is complete
+    const simulateAsyncTask = async () => {
+      // Simulate a delay (you can replace this with your actual asynchronous task)
+      await new Promise(resolve => setTimeout(resolve, 4000));
+
+      // Set showWelcome to false to hide the welcome screen
+      setShowWelcome(false);
+    };
+
+    simulateAsyncTask();
+  }, []);
+
   return (
-    // <TestScreen />
     <>
-    <StatusBar hidden={true} />
-    <SoundsNavigation />
+      <StatusBar hidden={true} />
+      {showWelcome ? <WelcomeScreen /> : <SoundsNavigation />}
     </>
   );
 }
-
-
