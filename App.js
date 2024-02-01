@@ -6,7 +6,10 @@ import SoundsNavigation from './navigation/SoundsNavigation';
 export default function App() {
   return (
     // <TestScreen />
+    <>
+    <StatusBar hidden={true} />
     <SoundsNavigation />
+    </>
   );
 }
 

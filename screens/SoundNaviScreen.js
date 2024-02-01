@@ -1,4 +1,3 @@
-// SoundNaviScreen.js
 import React from 'react';
 import { View, TouchableOpacity, Text, Image, StyleSheet, FlatList } from 'react-native';
 
@@ -8,7 +7,6 @@ const SoundNaviScreen = ({ navigation }) => {
     { id: 2, imageUrl: 'https://cdn-icons-png.flaticon.com/128/426/426833.png', buttonText: 'Popular 100', screenName: 'Page2' },
     { id: 3, imageUrl: 'https://cdn-icons-png.flaticon.com/128/4221/4221484.png', buttonText: 'Movie Meme', screenName: 'Page3' },
     { id: 4, imageUrl: 'https://cdn-icons-png.flaticon.com/128/14096/14096130.png', buttonText: 'Other Memes', screenName: 'ComingSoon' },
-    
     // Add more items as needed
   ];
 
@@ -27,27 +25,35 @@ const SoundNaviScreen = ({ navigation }) => {
   );
 
   return (
-    <FlatList
-      data={jsonData}
-      renderItem={renderButton}
-      keyExtractor={(item) => item.id.toString()}
-      numColumns={2} // Two columns per row
-      contentContainerStyle={styles.container}
-    />
+    <View style={styles.container}>
+      <FlatList
+        data={jsonData}
+        renderItem={renderButton}
+        keyExtractor={(item) => item.id.toString()}
+        numColumns={2} // Two columns per row
+        style={styles.flatListContainer} // Use style instead of contentContainerStyle
+      />
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#EAEAEA',
     justifyContent: 'center',
     alignItems: 'center',
   },
+  flatListContainer: {
+    padding: 0,
+     // Additional padding to the right
+    backgroundColor: '#EAEAEA', // Light Grey
+  },
   button: {
-    margin: 2,
+    margin: 5,
     padding: 10,
     borderRadius: 10,
-    backgroundColor: '#3498db',
+    backgroundColor: '#CCCCCC', // Grey
     alignItems: 'center',
     width: 150, // Adjust the width as needed
   },
