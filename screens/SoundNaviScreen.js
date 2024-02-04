@@ -5,9 +5,13 @@ const SoundNaviScreen = ({ navigation }) => {
   const jsonData = [
     { id: 1, imagePath: require('../assets/memes/MainScreen/fart.png'), buttonText: 'Fart Sounds', screenName: 'Page1' },
     { id: 2, imagePath: require('../assets/memes/MainScreen/bear.png'), buttonText: 'Animal Sounds', screenName: 'Page2' },
-    { id: 3, imagePath: require('../assets/memes/MainScreen/fart.png'), buttonText: 'Movie Meme', screenName: 'Page3' },
-    { id: 4, imagePath: require('../assets/memes/MainScreen/fart.png'), buttonText: 'Popular 100', screenName: 'Page3' },
-    { id: 5, imagePath: require('../assets/memes/MainScreen/meme.png'), buttonText: 'Other Memes', screenName: 'ComingSoon' },
+    { id: 3, imagePath: require('../assets/memes/MainScreen/trending.png'), buttonText: 'Viral SFX', screenName: 'Page3' },
+    { id: 4, imagePath: require('../assets/memes/MainScreen/movie.png'), buttonText: 'Movie SFX', screenName: 'Page3' },
+    { id: 5, imagePath: require('../assets/memes/MainScreen/cartoon.png'), buttonText: 'Cartoon SFX', screenName: 'Page3' },
+    { id: 6, imagePath: require('../assets/memes/MainScreen/youtube.png'), buttonText: 'Youtube (1)', screenName: 'Page3' },
+    { id: 7, imagePath: require('../assets/memes/MainScreen/youtube.png'), buttonText: 'Youtube (2)', screenName: 'Page3' },
+    { id: 7, imagePath: require('../assets/memes/MainScreen/anime.png'), buttonText: 'Anime SFX', screenName: 'ComingSoon' },
+    { id: 8, imagePath: require('../assets/memes/MainScreen/meme.png'), buttonText: 'Other Memes', screenName: 'ComingSoon' },
     // Add more items as needed
   ];
 
