@@ -1,12 +1,11 @@
 // SupportScreen.js
 import React from 'react';
-import { View, Image, StyleSheet, TouchableOpacity, Linking } from 'react-native';
+import { View, Image, StyleSheet, TouchableOpacity, Linking, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-import login from '../../assets/auth/login.png';
+import login from '../../assets/auth/manoj_c.png';
 
 const socialMediaData = [
-  // { name: "Facebook", url: "https://www.facebook.com" },
   { name: "Twitter", url: "https://twitter.com/manoj_kumar__c" },
   { name: "Instagram", url: "https://www.instagram.com/manojkumar._.c/" },
   { name: "LinkedIn", url: "https://www.linkedin.com/in/manojkumar--c/" },
@@ -21,6 +20,11 @@ const SupportScreen = () => {
 
   return (
     <View style={styles.container}>
+      <View style={styles.infoContainer}>
+        <Text style={styles.TextTop}>
+          Support me 😊
+        </Text>
+      </View>
       {/* Image at the top */}
       <Image
         source={login}
@@ -39,6 +43,13 @@ const SupportScreen = () => {
           </TouchableOpacity>
         ))}
       </View>
+
+      {/* Information about you */}
+      <View style={styles.infoContainer}>
+        <Text style={styles.infoText}>
+          Hi, I'm ManojKumar! A passionate developer and content creator. Connect with me on social media for updates and more.
+        </Text>
+      </View>
     </View>
   );
 };
@@ -51,7 +62,7 @@ const styles = StyleSheet.create({
   },
   image: {
     width: '100%',
-    height: 200,
+    height: 300,
     resizeMode: 'cover',
   },
   socialContainer: {
@@ -60,6 +71,24 @@ const styles = StyleSheet.create({
   },
   iconContainer: {
     marginHorizontal: 15,
+  },
+  infoContainer: {
+    marginTop: 20,
+    paddingHorizontal: 20,
+  },
+  infoText: {
+    textAlign: 'center',
+    fontSize: 16,
+    color: '#333',
+    fontStyle:"italic",
+    fontWeight: 'bold'
+  },
+  TextTop: {
+    textAlign: 'center',
+    fontSize: 20,
+    color: '#333',
+  
+    fontWeight: 'bold'
   },
 });
 
