@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, TouchableOpacity, Text, Image, StyleSheet, FlatList } from 'react-native';
+import { View, TouchableOpacity, Text, Image, StyleSheet, FlatList, Dimensions } from 'react-native';
 
 const SoundNaviScreen = ({ navigation }) => {
   const jsonData = [
@@ -12,7 +12,6 @@ const SoundNaviScreen = ({ navigation }) => {
     { id: 7, imagePath: require('../assets/memes/MainScreen/youtube.png'), buttonText: 'Youtube (2)', screenName: 'Page3' },
     { id: 7, imagePath: require('../assets/memes/MainScreen/anime.png'), buttonText: 'Anime SFX', screenName: 'ComingSoon' },
     { id: 8, imagePath: require('../assets/memes/MainScreen/meme.png'), buttonText: 'Other Memes', screenName: 'ComingSoon' },
-    // Add more items as needed
   ];
 
   const handleButtonPress = (screenName) => {
@@ -42,6 +41,8 @@ const SoundNaviScreen = ({ navigation }) => {
   );
 };
 
+const windowWidth = Dimensions.get('window').width;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -50,20 +51,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   flatListContainer: {
-    padding: 0,
+    padding: 10,
     backgroundColor: '#EAEAEA', // Light Grey
   },
   button: {
-    margin: 5,
+    margin: 10,
     padding: 10,
     borderRadius: 10,
     backgroundColor: '#CCCCCC', // Grey
     alignItems: 'center',
-    width: 150, // Adjust the width as needed
+    width: windowWidth / 2 - 30, // Adjusted the width and margin for better spacing
   },
   buttonText: {
     color: 'black',
-    fontWeight:'bold',
+    fontWeight: 'bold',
     fontSize: 16,
     marginTop: 5,
   },
