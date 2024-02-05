@@ -5,6 +5,8 @@ import SoundsNavigation from './navigation/SoundsNavigation';
 import BottomTabNavigator from './navigation/BottomTabNavigation';
 import RootNavigation from './navigation/RootNavigation';
 
+
+
 export default function App() {
   const [showWelcome, setShowWelcome] = useState(true);
 
@@ -29,3 +31,11 @@ export default function App() {
     </>
   );
 }
+
+
+
+// Register App Components 
+import { AppRegistry } from 'react-native';
+import { name as appName } from './app.json';
+
+AppRegistry.registerComponent(appName, () => App);

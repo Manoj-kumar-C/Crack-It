@@ -1,55 +1,75 @@
-// ComingSoonScreen.js
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
-import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
+import { View, TouchableOpacity, Text, Image, StyleSheet, FlatList, Dimensions } from 'react-native';
 
-const CourseScreen = () => {
+const CourseScreen = ({ navigation }) => {
+  const jsonData = [
+    { id: 1, imagePath: require('../../assets/course/content-strategy.png'), buttonText: 'Digital Marketing', screenName: 'ComingSoon' },
+    { id: 2, imagePath: require('../../assets/course/coding.png'), buttonText: 'Web Development', screenName: 'ComingSoon' },
+    { id: 7, imagePath: require('../../assets/course/app-settings.png'), buttonText: 'App Development', screenName: 'ComingSoon' },
+    { id: 8, imagePath: require('../../assets/course/app-development.png'), buttonText: 'WordPress Development', screenName: 'ComingSoon' },
+    { id: 7, imagePath: require('../../assets/course/montage.png'), buttonText: 'Video Editing', screenName: 'ComingSoon' },
+    { id: 8, imagePath: require('../../assets/course/ux.png'), buttonText: 'Ui/Ux Design', screenName: 'ComingSoon' },
+  ];
+
+  const handleButtonPress = (screenName) => {
+    navigation.navigate(screenName);
+  };
+
+  const renderButton = ({ item }) => (
+    <TouchableOpacity
+      style={styles.button}
+      onPress={() => handleButtonPress(item.screenName)}
+    >
+      <Image source={item.imagePath} style={styles.buttonImage} />
+      <Text style={styles.buttonText}>{item.buttonText}</Text>
+    </TouchableOpacity>
+  );
+
   return (
     <View style={styles.container}>
-      <View style={styles.iconContainer}>
-        <FontAwesomeIcon name="hourglass-half" size={100} color="#3498db" />
-      </View>
-      <Text style={styles.title}>Coming Soon!</Text>
-      <Text style={styles.subtitle}>Stay tuned for exciting updates</Text>
-      <View style={styles.socialIconsContainer}>
-        <Icon name="mail-outline" size={30} color="#3498db" style={styles.socialIcon} />
-        <Icon name="facebook" size={30} color="#3498db" style={styles.socialIcon} />
-        <Icon name="link" size={30} color="#3498db" style={styles.socialIcon} />
-        {/* <Icon name="twitter" size={30} color="#3498db" style={styles.socialIcon} /> */}
-      </View>
+      <FlatList
+        data={jsonData}
+        renderItem={renderButton}
+        keyExtractor={(item) => item.id.toString()}
+        numColumns={2} // Two columns per row
+        style={styles.flatListContainer} // Use style instead of contentContainerStyle
+      />
     </View>
   );
 };
 
+const windowWidth = Dimensions.get('window').width;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#EAEAEA',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#ffffff',
   },
-  iconContainer: {
-    marginBottom: 20,
+  flatListContainer: {
+    padding: 10,
+    backgroundColor: '#EAEAEA', // Light Grey
   },
-  title: {
-    fontSize: 24,
+  button: {
+    margin: 10,
+    padding: 10,
+    borderRadius: 10,
+    backgroundColor: '#CCCCCC', // Grey
+    alignItems: 'center',
+    width: windowWidth / 2 - 30, // Adjusted the width and margin for better spacing
+  },
+  buttonText: {
+    color: 'black',
     fontWeight: 'bold',
-    marginVertical: 10,
-  },
-  subtitle: {
     fontSize: 16,
-    color: '#777',
-    textAlign: 'center',
-    marginBottom: 40,
+    marginTop: 5,
+    textAlign: 'center'
   },
-  socialIconsContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    width: '60%',
-  },
-  socialIcon: {
-    marginBottom: 20,
+  buttonImage: {
+    width: 50, // Set the width as needed
+    height: 50, // Set the height as needed
+    resizeMode: 'contain',
   },
 });
 
