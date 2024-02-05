@@ -5,10 +5,10 @@ const CourseScreen = ({ navigation }) => {
   const jsonData = [
     { id: 1, imagePath: require('../../assets/course/content-strategy.png'), buttonText: 'Digital Marketing', screenName: 'ComingSoon' },
     { id: 2, imagePath: require('../../assets/course/coding.png'), buttonText: 'Web Development', screenName: 'ComingSoon' },
-    { id: 7, imagePath: require('../../assets/course/app-settings.png'), buttonText: 'App Development', screenName: 'ComingSoon' },
-    { id: 8, imagePath: require('../../assets/course/app-development.png'), buttonText: 'WordPress Development', screenName: 'ComingSoon' },
-    { id: 7, imagePath: require('../../assets/course/montage.png'), buttonText: 'Video Editing', screenName: 'ComingSoon' },
-    { id: 8, imagePath: require('../../assets/course/ux.png'), buttonText: 'Ui/Ux Design', screenName: 'ComingSoon' },
+    { id: 3, imagePath: require('../../assets/course/app-settings.png'), buttonText: 'App Development', screenName: 'ComingSoon' },
+    { id: 4, imagePath: require('../../assets/course/app-development.png'), buttonText: 'WordPress Development', screenName: 'ComingSoon' },
+    { id: 5, imagePath: require('../../assets/course/montage.png'), buttonText: 'Video Editing', screenName: 'ComingSoon' },
+    { id: 6, imagePath: require('../../assets/course/ux.png'), buttonText: 'Ui/Ux Design', screenName: 'ComingSoon' },
   ];
 
   const handleButtonPress = (screenName) => {

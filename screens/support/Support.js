@@ -9,7 +9,8 @@ const socialMediaData = [
   { name: "Twitter", url: "https://twitter.com/manoj_kumar__c" },
   { name: "Instagram", url: "https://www.instagram.com/manojkumar._.c/" },
   { name: "LinkedIn", url: "https://www.linkedin.com/in/manojkumar--c/" },
-  { name: "Youtube", url: "https://www.youtube.com/@Manojkumar_C/" }
+  { name: "Youtube", url: "https://www.youtube.com/@Manojkumar_C/" },
+  { name: "Tree", url: "https://www.linktree.com/Manojkumar_C/" }
 ];
 
 const SupportScreen = () => {
