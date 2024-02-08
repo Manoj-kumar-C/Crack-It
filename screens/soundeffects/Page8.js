@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image, StatusBar, FlatList, Share } from 'react-native';
 import { Audio } from 'expo-av';
 
-const Page2 = () => {
+const Page8 = () => {
   const [songs, setSongs] = useState([]);
   const [sound, setSound] = useState();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://crack-it-backend.vercel.app/animals'); // Replace with your actual API endpoint
+        const response = await fetch('https://crack-it-backend.vercel.app/anime'); // Replace with your actual API endpoint
         const data = await response.json();
         setSongs(data);
       } catch (error) {
@@ -59,7 +59,7 @@ const Page2 = () => {
         >
           <Image source={require('../../assets/memes/others/share.png')} style={styles.shareIcon} />
         </TouchableOpacity>
-        <Image source={require('../../assets/memes/ButtonIcons/animal.png')} style={styles.customIcon} />
+        <Image source={require('../../assets/memes/ButtonIcons/anime.png')} style={styles.customIcon} />
         <Text style={styles.buttonText}>{item.title}</Text>
       </View>
     </TouchableOpacity>
@@ -121,4 +121,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Page2;
+export default Page8;

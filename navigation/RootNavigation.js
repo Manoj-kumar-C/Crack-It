@@ -17,6 +17,12 @@ import VideoList from '../screens/youtube/videoList';
 
 //Icons Tab Navigation
 import Icon from 'react-native-vector-icons/Ionicons';
+import Page5 from '../screens/soundeffects/Page5';
+import FavoriteScreen from '../screens/soundeffects/FavoriteScreen';
+import Page4 from '../screens/soundeffects/Page4';
+import Page6 from '../screens/soundeffects/Page6';
+import Page7 from '../screens/soundeffects/Page7';
+import Page8 from '../screens/soundeffects/Page8';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -69,6 +75,12 @@ const NestedStackScreen = () => {
       <Stack.Screen options={{ headerShown: false }} name="Page1" component={Page1} />
       <Stack.Screen options={{ headerShown: false }} name="Page2" component={Page2} />
       <Stack.Screen options={{ headerShown: false }} name="Page3" component={Page3} />
+      <Stack.Screen options={{ headerShown: false }} name="Page4" component={Page4} />
+      <Stack.Screen options={{ headerShown: false }} name="Page5" component={Page5} />
+      <Stack.Screen options={{ headerShown: false }} name="Page6" component={Page6} />
+      <Stack.Screen options={{ headerShown: false }} name="Page7" component={Page7} />
+      <Stack.Screen options={{ headerShown: false }} name="Page8" component={Page8} />
+      <Stack.Screen options={{ headerShown: false }} name="Favorite" component={FavoriteScreen} />
       <Stack.Screen options={{ headerShown: false }} name="ComingSoon" component={ComingSoonScreen} />
       <Stack.Screen options={{ headerShown: false }} name="LoginScreen" component={LoginScreen} />
       <Stack.Screen options={{ headerShown: false }} name="SignUpScreen" component={SignUpScreen} />

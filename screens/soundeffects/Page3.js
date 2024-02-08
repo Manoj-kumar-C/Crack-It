@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Image, StatusBar, FlatList } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Image, StatusBar, FlatList, Share } from 'react-native';
 import { Audio } from 'expo-av';
 
 const Page3 = () => {
@@ -9,7 +9,7 @@ const Page3 = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://crack-it-backend.vercel.app/farts'); // Replace with your actual API endpoint
+        const response = await fetch('https://crack-it-backend.vercel.app/viral'); // Replace with your actual API endpoint
         const data = await response.json();
         setSongs(data);
       } catch (error) {
@@ -40,16 +40,26 @@ const Page3 = () => {
     setSound(newSound);
   };
 
+  const shareAudioFile = (audioFile) => {
+    Share.share({
+      message: audioFile,
+      title: 'Check out this audio!',
+    });
+  };
+
   const renderItem = ({ item }) => (
     <TouchableOpacity
       style={styles.buttonContainer}
       onPress={() => playSong(item.audioFile)}
     >
-      <View style={styles.shareIconContainer}>
-        <Image source={require('../../assets/auth/signup.png')} style={styles.shareIcon} />
-      </View>
       <View style={styles.buttonContent}>
-        <Image source={require('../../assets/memes/others/fart.png')} style={styles.customIcon} />
+        <TouchableOpacity
+          style={styles.shareIconContainer}
+          onPress={() => shareAudioFile(item.audioFile)}
+        >
+          <Image source={require('../../assets/memes/others/share.png')} style={styles.shareIcon} />
+        </TouchableOpacity>
+        <Image source={require('../../assets/memes/ButtonIcons/viral.png')} style={styles.customIcon} />
         <Text style={styles.buttonText}>{item.title}</Text>
       </View>
     </TouchableOpacity>
@@ -86,15 +96,19 @@ const styles = StyleSheet.create({
   },
   shareIconContainer: {
     position: 'absolute',
-    top: 10,
-    right: 10,
-    
+    top: 5,
+    right: 5,
+  },
+  shareIcon: {
+    height: 20,
+    width: 20,
   },
   buttonContent: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
+    position: 'relative',
   },
   customIcon: {
     marginBottom: 10,
@@ -104,12 +118,6 @@ const styles = StyleSheet.create({
   buttonText: {
     fontSize: 16,
     color: '#333', // Dark Grey
-  },
-  scrollViewContent: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
-    padding: 10,
   },
 });
 
