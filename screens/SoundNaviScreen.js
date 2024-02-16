@@ -10,9 +10,9 @@ const SoundNaviScreen = ({ navigation }) => {
     { id: 5, imagePath: require('../assets/memes/MainScreen/cartoon.png'), buttonText: 'Cartoon SFX', screenName: 'Page5' },
     { id: 6, imagePath: require('../assets/memes/MainScreen/youtube.png'), buttonText: 'Youtube (1)', screenName: 'Page6' },
     { id: 7, imagePath: require('../assets/memes/MainScreen/youtube.png'), buttonText: 'Youtube (2)', screenName: 'Page7' },
-    { id: 8, imagePath: require('../assets/memes/MainScreen/anime.png'), buttonText: 'Anime SFX', screenName: 'Page8' },
+    { id: 8, imagePath: require('../assets/memes/MainScreen/anime.png'), buttonText: 'Anime SFX', screenName: 'ComingSoon' },
     { id: 8, imagePath: require('../assets/memes/MainScreen/meme.png'), buttonText: 'Other Memes', screenName: 'ComingSoon' },
-    { id: 8, imagePath: require('../assets/memes/MainScreen/meme.png'), buttonText: 'Favorites', screenName: 'Favorite' },
+    { id: 8, imagePath: require('../assets/memes/MainScreen/meme.png'), buttonText: 'Favorites', screenName: 'ComingSoon' },
   ];
 
   const handleButtonPress = (screenName) => {

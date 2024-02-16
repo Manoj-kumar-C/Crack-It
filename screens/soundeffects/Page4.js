@@ -9,7 +9,7 @@ const Page4 = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://crack-it-backend.vercel.app/movie'); // Replace with your actual API endpoint
+        const response = await fetch('https://crack-it-production.vercel.app/movie'); // Replace with your actual API endpoint
         const data = await response.json();
         setSongs(data);
       } catch (error) {

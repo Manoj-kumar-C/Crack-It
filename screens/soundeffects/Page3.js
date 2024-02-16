@@ -9,7 +9,7 @@ const Page3 = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://crack-it-backend.vercel.app/viral'); // Replace with your actual API endpoint
+        const response = await fetch('https://crack-it-production.vercel.app/viral'); // Replace with your actual API endpoint
         const data = await response.json();
         setSongs(data);
       } catch (error) {
